@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// optimal
+
+// rearrange array elements by sign = +ve, -ve, +ve, -ve
+// order of elements of same sign should not change
+// n is always even
+
+int main(){
+
+    vector <int> array = {3, 1, -2, -5, 2, -4};
+    int n = array.size();
+    vector <int> temp(n);
+    int posIndex = 0;
+    int negIndex = 1;
+
+    for(int i = 0; i < n; i++){
+        if(array[i] > 0){
+            temp[posIndex] = array[i];
+            posIndex += 2;
+        }
+        else{
+            temp[negIndex] = array[i];
+            negIndex += 2;
+        }
+    }
+
+    for(int i = 0; i < n; i++){
+        cout << temp[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
