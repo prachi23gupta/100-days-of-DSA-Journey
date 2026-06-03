@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 
-    vector <int> array = {1, 2, 5, 4, 3};
+    vector <int> array = {1, 2, 5, 4, 3}; 
     int n = array.size();
     int pivot = -1;
 
