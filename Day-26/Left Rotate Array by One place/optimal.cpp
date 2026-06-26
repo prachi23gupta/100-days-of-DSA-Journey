@@ -23,4 +23,4 @@ int main() {
 }
 
 // Time Complexity	= O(n)
-// Space Complexity = O(1) //tell the. interviewer if we say what is the extra space so according to it space comp is O(1) but if we consider the given array's space then it is O(N)
+// Space Complexity = O(1) // tell the interviewer if we say what is the extra space so according to it space comp is O(1) but if we consider the given array's space then it is O(N)
