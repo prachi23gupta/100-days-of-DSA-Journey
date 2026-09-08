@@ -10,29 +10,29 @@ string longestPalindrome(string s) {
 
     for (int i = 0; i < n; i++) {
 
-        // Odd length palindrome
-        int left = i, right = i;
+        // Odd length
+        int l = i, r = i;
 
-        while (left >= 0 && right < n && s[left] == s[right]) {
-            if (right - left + 1 > maxLen) {
-                start = left;
-                maxLen = right - left + 1;
+        while (l >= 0 && r < n && s[l] == s[r]) {
+            if (r - l + 1 > maxLen) {
+                start = l;
+                maxLen = r - l + 1;
             }
-            left--;
-            right++;
+            l--;
+            r++;
         }
 
-        // Even length palindrome
-        left = i;
-        right = i + 1;
+        // Even length
+        l = i;
+        r = i + 1;
 
-        while (left >= 0 && right < n && s[left] == s[right]) {
-            if (right - left + 1 > maxLen) {
-                start = left;
-                maxLen = right - left + 1;
+        while (l >= 0 && r < n && s[l] == s[r]) {
+            if (r - l + 1 > maxLen) {
+                start = l;
+                maxLen = r - l + 1;
             }
-            left--;
-            right++;
+            l--;
+            r++;
         }
     }
 
@@ -49,4 +49,4 @@ int main() {
 }
 
 // Time Complexity: O(n^2)
-// Space Complexity: O(1)
+// Space Complexity: O(1) extra space
