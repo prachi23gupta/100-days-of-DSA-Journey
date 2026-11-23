@@ -3,7 +3,7 @@
 using namespace std;
 
 // delete kth element of the LL
-// we use prev because kth el phle bale ka next hoga isliye
+// we use prev because kth element phle bale ka next hoga isliye
 // similar logic but little different see on striver
 
 class Node {
